@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Zen+Antique&display=swap');
+
+:root {
+  /* Shogun / Yoshimune Theme */
+  --bg-color: #0c0202;
+  /* Deep Lacquer Black */
+  --bg-pattern: radial-gradient(circle, #550000 1px, transparent 1px);
+  --bg-size: 20px 20px;
+
+  --primary-color: #d4af37;
+  /* Metallic Gold */
+  --primary-glow: rgba(212, 175, 55, 0.6);
+
+  --secondary-color: #ff0033;
+  /* Vivid Red */
+  --secondary-glow: rgba(255, 0, 51, 0.6);
+
+  --accent-white: #f8f8f8;
+  --accent-lacquer: #3a0000;
+
+  --text-main: #fffde7;
+  --text-muted: #d4af37;
+
+  --font-family: 'Zen Antique', 'Sawarabi Mincho', serif;
+
+  --transition-fast: 0.15s ease-out;
+  --transition-bounce: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --glass-bg: rgba(0, 0, 0, 0.6);
+  --glass-border: rgba(212, 175, 55, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #000000;
+  color: #d4af37;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; Remove to allow flow */
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Enable scroll */
+}
+
+#root {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  padding-bottom: 4rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Scrollbar setup */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+/* Utility Animations */
+@keyframes flash-gold {
+  0% {
+    box-shadow: 0 0 0 0 var(--primary-color);
+    background-color: #fff;
+  }
+
+  100% {
+    box-shadow: 0 0 50px 10px rgba(212, 175, 55, 0);
+    background-color: var(--primary-color);
+  }
+}
