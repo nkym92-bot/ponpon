@@ -3,7 +3,7 @@ import { useRecorder } from '../hooks/useRecorder';
 import './PadButton.css';
 import btnImg from '../assets/img/ボタン.png';
 
-const PadButton = ({ id, isFixed, label, mode, audioUrl, onUpdateAudio }) => {
+const PadButton = ({ id, isFixed, label, mode, audioUrl, onUpdateAudio, onInteraction }) => {
     const { isRecording, startRecording, stopRecording } = useRecorder();
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef(null);
@@ -16,6 +16,7 @@ const PadButton = ({ id, isFixed, label, mode, audioUrl, onUpdateAudio }) => {
     };
 
     const handlePlay = () => {
+        if (onInteraction) onInteraction();
         triggerVisualPlay();
 
         const soundToPlay = audioUrl;
@@ -41,6 +42,7 @@ const PadButton = ({ id, isFixed, label, mode, audioUrl, onUpdateAudio }) => {
     };
 
     const handleRecordStart = async () => {
+        if (onInteraction) onInteraction();
         if (!isFixed && mode === 'record') {
             await startRecording();
         }
