@@ -10,6 +10,7 @@ import sound4 from './assets/mp3/04_あけまして.MP3';
 import sound5 from './assets/mp3/05_あけまして.MP3';
 import sound6 from './assets/mp3/06_pon.MP3';
 import sound7 from './assets/mp3/07_いよー.MP3';
+import sound8 from './assets/mp3/08_お正月だよ.MP3';
 
 // Import Visual Assets
 import mainVisual from './assets/img/スクリーンショット 2026-02-02 143550.png';
@@ -60,8 +61,8 @@ function App() {
     { id: 5, label: 'あけまして2', isFixed: true, fixedSrc: sound5 },
     { id: 6, label: 'PON', isFixed: true, fixedSrc: sound6 },
     { id: 7, label: 'イヨー', isFixed: true, fixedSrc: sound7 },
-    { id: 8, label: 'REC 1', isFixed: false },
-    { id: 9, label: 'REC 2', isFixed: false },
+    { id: 8, label: 'お正月だよ', isFixed: true, fixedSrc: sound8 },
+    { id: 9, label: 'REC', isFixed: false },
   ];
 
   return (
